@@ -4,7 +4,7 @@ class NoteListViewController: UITableViewController {
     
     //MARK: Properties
     var viewModel: NotesListViewModelProtocol?
-
+    
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,7 +14,7 @@ class NoteListViewController: UITableViewController {
         
         setupTableView()
     }
-
+    
     // MARK: Private Methods
     private func setupTableView() {
         tableView.register(SimpleNoteTableViewCell.self, forCellReuseIdentifier: "SimpleNoteTableViewCell")
@@ -26,17 +26,27 @@ class NoteListViewController: UITableViewController {
 
 // MARK: UITableViewDataSource
 extension NoteListViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        viewModel?.section.count ?? 0
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        viewModel?.section[section].items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let note = viewModel?.section[indexPath.section].items[indexPath.row] as?
+        Note else { return UITableViewCell() }
         if indexPath.row == 0,
            let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleNoteTableViewCell",
                                                     for: indexPath) as? SimpleNoteTableViewCell {
+            cell.set(note: note)
             return cell
         } else if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageNoteTableViewCell",
                                                            for: indexPath) as? ImageNoteTableViewCell {
+            cell.set(note: note)
             return cell
         }
         

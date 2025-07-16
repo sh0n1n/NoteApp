@@ -5,5 +5,5 @@ struct Note: TableViewItemProtocol {
     let description: String
     let date: Date
     let imageUrl: String?
-    let imag: Data?
+    let image: Data?
 }

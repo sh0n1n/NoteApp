@@ -32,7 +32,7 @@ final class ImageNoteTableViewCell: UITableViewCell {
         return label
     }()
     
-    //MARK: INITIALIZATIONS
+    //MARK: Initializations
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -42,6 +42,15 @@ final class ImageNoteTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: Methods
+    func set(note: Note) {
+        titleLabel.text = note.title
+        guard let imageData = note.image,
+                let image = UIImage(data: imageData) else { return }
+        attachmentView.image = image
+    }
+    
     // MARK: Private Methods
     private func setupUI() {
         addSubview(containerView)
