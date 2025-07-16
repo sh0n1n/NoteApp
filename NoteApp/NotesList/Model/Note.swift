@@ -1,6 +1,6 @@
 import UIKit
 
-struct Note {
+struct Note: TableViewItemProtocol {
     let title: String
     let description: String
     let date: Date
