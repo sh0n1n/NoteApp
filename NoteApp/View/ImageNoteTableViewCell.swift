@@ -6,7 +6,7 @@ final class ImageNoteTableViewCell: UITableViewCell {
     private let containerView: UIView = {
         let view = UIView()
         
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemBackground
         view.layer.cornerRadius = 10
         
         return view
@@ -17,6 +17,8 @@ final class ImageNoteTableViewCell: UITableViewCell {
         
         view.layer.cornerRadius = 10
         view.image = UIImage(systemName: "photo")
+        view.layer.masksToBounds = true
+        view.contentMode = .scaleAspectFit
         
         return view
     }()
@@ -25,7 +27,7 @@ final class ImageNoteTableViewCell: UITableViewCell {
         let label = UILabel()
         
         label.text =  "Title Label Text"
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .boldSystemFont(ofSize: 18)
         
         return label
     }()

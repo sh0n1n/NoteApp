@@ -5,7 +5,10 @@ class NoteListViewController: UITableViewController {
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Notes"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setupTableView()
     }
 
@@ -13,6 +16,8 @@ class NoteListViewController: UITableViewController {
     private func setupTableView() {
         tableView.register(SimpleNoteTableViewCell.self, forCellReuseIdentifier: "SimpleNoteTableViewCell")
         tableView.register(ImageNoteTableViewCell.self, forCellReuseIdentifier: "ImageNoteTableViewCell")
+        
+        tableView.separatorStyle = .none
     }
 }
 

@@ -7,7 +7,7 @@ final class SimpleNoteTableViewCell: UITableViewCell {
     private let containerView: UIView = {
         let view = UIView()
         
-        view.backgroundColor = .systemRed
+        view.backgroundColor = .systemBackground
         view.layer.cornerRadius = 10
         
         return view
