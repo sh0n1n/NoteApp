@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8DB0A17E2E254EC9004B0BE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0A17D2E254EC9004B0BE0 /* SnapKit */; };
-		8DB0A1802E254EC9004B0BE0 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0A17F2E254EC9004B0BE0 /* SnapKit-Dynamic */; };
+		8DB0A1A12E266557004B0BE0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB0A1A02E266557004B0BE0 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DB0A17E2E254EC9004B0BE0 /* SnapKit in Frameworks */,
-				8DB0A1802E254EC9004B0BE0 /* SnapKit-Dynamic in Frameworks */,
+				8DB0A1A12E266557004B0BE0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +83,7 @@
 			);
 			name = NoteApp;
 			packageProductDependencies = (
-				8DB0A17D2E254EC9004B0BE0 /* SnapKit */,
-				8DB0A17F2E254EC9004B0BE0 /* SnapKit-Dynamic */,
+				8DB0A1A02E266557004B0BE0 /* SnapKit */,
 			);
 			productName = NoteApp;
 			productReference = 8DB0A1602E250685004B0BE0 /* NoteApp.app */;
@@ -117,7 +114,7 @@
 			mainGroup = 8DB0A1572E250685004B0BE0;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				8DB0A17C2E254EC9004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8DB0A19F2E266503004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8DB0A1612E250685004B0BE0 /* Products */;
@@ -257,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -315,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -349,7 +346,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8DB0A17C2E254EC9004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		8DB0A19F2E266503004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
@@ -360,15 +357,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8DB0A17D2E254EC9004B0BE0 /* SnapKit */ = {
+		8DB0A1A02E266557004B0BE0 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8DB0A17C2E254EC9004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = 8DB0A19F2E266503004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		8DB0A17F2E254EC9004B0BE0 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8DB0A17C2E254EC9004B0BE0 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

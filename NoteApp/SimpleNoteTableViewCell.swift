@@ -2,7 +2,8 @@ import SnapKit
 import UIKit
 
 final class SimpleNoteTableViewCell: UITableViewCell {
-     //MARK: GUI VARIABLESconstant
+     
+    //MARK: GUI VARIABLESconstant
     private let containerView: UIView = {
         let view = UIView()
         
@@ -20,6 +21,7 @@ final class SimpleNoteTableViewCell: UITableViewCell {
        
        return label
    }()
+    
     //MARK: INITIALIZATIONS
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -38,6 +40,13 @@ final class SimpleNoteTableViewCell: UITableViewCell {
         setupConsraints()
     }
     private func setupConsraints() {
+        containerView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview().inset(5)
+            make.leading.trailing.equalToSuperview().inset(10)
+        }
         
+        titleLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(10)
+        }
     }
 }
