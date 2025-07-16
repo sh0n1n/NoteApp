@@ -1,6 +1,9 @@
 import UIKit
 
 class NoteListViewController: UITableViewController {
+    
+    //MARK: Properties
+    var viewModel: NotesListViewModelProtocol?
 
     // MARK: Life cycle
     override func viewDidLoad() {
