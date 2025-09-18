@@ -13,6 +13,7 @@ class NoteListViewController: UITableViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         
         setupTableView()
+        setupToolBar()
     }
     
     // MARK: Private Methods
@@ -21,6 +22,18 @@ class NoteListViewController: UITableViewController {
         tableView.register(ImageNoteTableViewCell.self, forCellReuseIdentifier: "ImageNoteTableViewCell")
         
         tableView.separatorStyle = .none
+    }
+    
+    private func setupToolBar() {
+        let addButton = UIBarButtonItem(title: "Add Note", style: .done, target: self, action: #selector(addAction))
+        let spacing = UIBarButtonItem(systemItem: .flexibleSpace)
+        setToolbarItems([spacing, addButton], animated: true)
+        navigationController?.isToolbarHidden = false
+    }
+    
+    @objc
+    private func addAction() {
+        
     }
 }
 
