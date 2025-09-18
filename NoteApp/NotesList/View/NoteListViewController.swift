@@ -69,5 +69,9 @@ extension NoteListViewController {
 
 // MARK: UITableViewDelegate
 extension NoteListViewController {
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let noteViewController = NoteViewController()
+        navigationController?.popToViewController(noteViewController, animated: true)
+    }
 }
