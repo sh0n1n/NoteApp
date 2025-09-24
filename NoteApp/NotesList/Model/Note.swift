@@ -27,6 +27,7 @@ enum NoteCategory: String, CaseIterable {
         }
     }
 }
+
 struct Note: TableViewItemProtocol {
     let title: String
     let description: String

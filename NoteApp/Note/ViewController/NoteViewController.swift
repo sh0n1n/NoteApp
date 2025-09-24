@@ -58,11 +58,7 @@ final class NoteViewController: UIViewController {
         
     }
     
-    @objc
-    private func addCategoryColor() {
-        
-    }
-    
+
     private func setupUI() {
         view.addSubview(attachmentView)
         view.addSubview(texttView)
@@ -107,7 +103,5 @@ final class NoteViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAction))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategory))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategoryColor))
-
     }
 }
