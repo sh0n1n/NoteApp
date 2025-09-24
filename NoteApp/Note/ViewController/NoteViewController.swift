@@ -45,20 +45,15 @@ final class NoteViewController: UIViewController {
     //MARK: Private Methods
     @objc
     private func saveAction() {
-        
+        print("Save Tapped")
     }
     
     @objc
     private func deleteAction() {
-        
-    }
-    
-    @objc
-    private func addCategory() {
-        
-    }
-    
+        print("Delete Tapped")
 
+    }
+    
     private func setupUI() {
         view.addSubview(attachmentView)
         view.addSubview(texttView)
@@ -102,6 +97,5 @@ final class NoteViewController: UIViewController {
         setToolbarItems([trashButton], animated: true)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAction))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategory))
     }
 }
