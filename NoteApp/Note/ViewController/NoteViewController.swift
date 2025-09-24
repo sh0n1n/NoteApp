@@ -43,6 +43,15 @@ final class NoteViewController: UIViewController {
     }
     
     //MARK: Private Methods
+    @objc
+    private func saveAction() {
+        
+    }
+    @objc
+    private func deleteAction() {
+        
+    }
+    
     private func setupUI() {
         view.addSubview(attachmentView)
         view.addSubview(texttView)
@@ -82,9 +91,9 @@ final class NoteViewController: UIViewController {
     }
     
     private func setupBars() {
-        let trshButton = UIBarButtonItem(systemItem: .trash)
+        let trshButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAction))
         setToolbarItems([trshButton], animated: true)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .save)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAction))
     }
 }
