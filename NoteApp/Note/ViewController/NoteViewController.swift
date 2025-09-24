@@ -47,8 +47,19 @@ final class NoteViewController: UIViewController {
     private func saveAction() {
         
     }
+    
     @objc
     private func deleteAction() {
+        
+    }
+    
+    @objc
+    private func addCategory() {
+        
+    }
+    
+    @objc
+    private func addCategoryColor() {
         
     }
     
@@ -91,9 +102,12 @@ final class NoteViewController: UIViewController {
     }
     
     private func setupBars() {
-        let trshButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAction))
-        setToolbarItems([trshButton], animated: true)
+        let trashButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteAction))
+        setToolbarItems([trashButton], animated: true)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveAction))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategory))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addCategoryColor))
+
     }
 }
