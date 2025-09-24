@@ -16,6 +16,9 @@ final class NoteViewController: UIViewController {
     
     private let texttView: UITextView = {
         let view = UITextView()
+        
+        view.layer.borderColor = UIColor.systemBackground.cgColor
+        view.layer.borderWidth = 1
         return view
     }()
     
@@ -44,9 +47,12 @@ final class NoteViewController: UIViewController {
         view.addSubview(attachmentView)
         view.addSubview(texttView)
         view.backgroundColor = .white
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(recognizer)
         
         setupConstraints()
         setImageHeight()
+        setupBars()
     }
     
     private func setupConstraints() {
@@ -57,7 +63,8 @@ final class NoteViewController: UIViewController {
         
         texttView.snp.makeConstraints { make in
             make.top.equalTo(attachmentView.snp.bottom).offset(10)
-            make.leading.trailing.bottom.equalToSuperview().inset(10)
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.bottom.equalTo(view.keyboardLayoutGuide.snp.top).inset(-10)
         }
     }
     
@@ -67,5 +74,17 @@ final class NoteViewController: UIViewController {
             make.height.equalTo(200)
             
         }
+    }
+    
+    @objc
+    private func hideKeyboard() {
+        texttView.resignFirstResponder()
+    }
+    
+    private func setupBars() {
+        let trshButton = UIBarButtonItem(systemItem: .trash)
+        setToolbarItems([trshButton], animated: true)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(systemItem: .save)
     }
 }
